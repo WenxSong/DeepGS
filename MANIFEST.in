@@ -1,0 +1,19 @@
+include README.md
+include LICENSE CITATION.cff
+include .gitignore
+recursive-include .github/workflows *.yml
+recursive-include src/deepgs/templates *.yaml
+recursive-include examples *.py
+recursive-include configs *.yaml
+recursive-include benchmarks *.py *.md
+recursive-include docs *.md *.json
+include data/README.md data/synthetic/README.md data/real/README.md
+include data/real/metadata.example.yaml
+include data/synthetic/heat_demo/metadata.yaml
+include data/synthetic/heat_demo/observations.npz
+include data/synthetic/heat_demo/observations.csv
+global-exclude th.txt *.npy
+recursive-include tests *.py
+prune intermediate
+prune runs
+global-exclude __pycache__ *.py[cod]

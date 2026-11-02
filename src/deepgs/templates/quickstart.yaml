@@ -1,0 +1,26 @@
+preprocess:
+  field:
+    hidden_layers: 2
+    width: 10
+    iterations: 20
+library:
+  depth_count: 5
+  time_count: 100
+structure:
+  grouping:
+    min_group_size: 20
+  sgtr:
+    num_tols: 20
+  spline:
+    n_internal_knots: 2
+inversion:
+  field:
+    hidden_layers: 2
+    width: 10
+  training:
+    epochs: 20
+    log_every: 10
+  collocation:
+    points: 50
+runtime:
+  device: cpu

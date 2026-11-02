@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepgs"
+version = "0.1.0"
+description = "Data-driven discovery of soil water flow equations: group sparsity, physics-informed learning and spline regularization"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Wenxiang Song" }]
+license = { file = "LICENSE" }
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "scikit-learn>=1.2",
+    "kneed>=0.8",
+    "pyyaml>=6.0",
+    "torch>=2.0",
+]
+
+[project.urls]
+Repository = "https://github.com/WenxSong/DeepGS"
+Documentation = "https://github.com/WenxSong/DeepGS/blob/main/docs/two_stage_guide.md"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+deepgs = "deepgs.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+deepgs = ["templates/*.yaml"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

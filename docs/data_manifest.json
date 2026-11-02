@@ -1,0 +1,84 @@
+{
+  "recorded_date": "2026-10-31",
+  "files": [
+    {
+      "path": "intermediate/data/loam_all_0.2/alpha.npy",
+      "bytes": 936,
+      "sha256": "16400a70a6da010c52cf5f5152412f719a77d68f67ae8da8b109219fdb0ebebc",
+      "shape": [
+        101
+      ],
+      "original_path": "data/loam_all_0.2/alpha.npy",
+      "dataset_kind": "synthetic"
+    },
+    {
+      "path": "intermediate/data/loam_all_0.2/ks.npy",
+      "bytes": 928,
+      "sha256": "7ccd2e4c3c9ea7c85785bc25c75ea2d7bb03ef4a6c6ac6e69b23ae6bd13d0fa0",
+      "shape": [
+        100
+      ],
+      "original_path": "data/loam_all_0.2/ks.npy",
+      "dataset_kind": "synthetic"
+    },
+    {
+      "path": "intermediate/data/loam_all_0.2/n.npy",
+      "bytes": 936,
+      "sha256": "38dae4cbbc60cb6cca6d2fd1d59fcb2dffd88e1e233cbec8be5cc92e8f6d4d3b",
+      "shape": [
+        101
+      ],
+      "original_path": "data/loam_all_0.2/n.npy",
+      "dataset_kind": "synthetic"
+    },
+    {
+      "path": "intermediate/data/loam_all_0.2/th.txt",
+      "bytes": 17360000,
+      "sha256": "471829e74912a58c2cc5bc5464de4a8abe030704291dd19a837f133be65a5f44",
+      "shape": [
+        10000,
+        102
+      ],
+      "original_path": "data/loam_all_0.2/th.txt",
+      "dataset_kind": "synthetic"
+    },
+    {
+      "path": "intermediate/data/th.txt",
+      "bytes": 17360000,
+      "sha256": "bf1a426bd0c13fd4cfcb0bedfc9d2de9a40d9a2ea587297c4a2c2385df1768ea",
+      "shape": [
+        10000,
+        102
+      ],
+      "original_path": "data/th.txt",
+      "dataset_kind": "synthetic"
+    }
+  ],
+  "heterogeneous": {
+    "Ks_location": "nodal, confirmed by author 2026-10-31",
+    "missing_last_node": "possible, not confirmed",
+    "padding": "repeat final available Ks at node 101",
+    "theta_s": {
+      "value": 0.43,
+      "status": "constant at every depth, confirmed by author 2026-10-31"
+    },
+    "theta_r": {
+      "value": 0.078,
+      "status": "constant at every depth, confirmed by author 2026-10-31"
+    }
+  },
+  "public_record_check": {
+    "record": "https://zenodo.org/records/14551650",
+    "record_license": "cc-by-4.0",
+    "checked_date": "2026-10-31",
+    "download_md5_verified": true,
+    "local_profiles_identical_to_archived_files": false,
+    "parameter_arrays_present_in_archive": false,
+    "license_applied_to_local_files": false
+  },
+  "redistribution_status": "awaiting author confirmation; raw research inputs excluded from source/wheel distributions and Git by default",
+  "code_license": "MIT, confirmed by author 2026-10-31; does not cover the research data",
+  "raw_files_modified": false,
+  "layout_note": "Research files archived under intermediate/data; source-file bytes and hashes unchanged. Original manifest remains with archived data.",
+  "public_dataset_layout": "data/synthetic and data/real contain standard formats; original research arrays remain archived under intermediate/data"
+}

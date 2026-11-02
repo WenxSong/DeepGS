@@ -1,0 +1,26 @@
+name: CPU tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install -e '.[dev]'
+      - run: python -m pytest -q
+        env:
+          OMP_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+      - run: python -m pip install build
+      - run: python -m build --outdir intermediate/releases
+      - run: python -m pip install --force-reinstall --no-deps intermediate/releases/*.whl
+      - name: Check installed template resources outside the checkout
+        working-directory: ${{ runner.temp }}
+        run: |
+          python -I -m deepgs.cli methods
+          python -I -m deepgs.cli init --selector spline --coefficient-form bspline --output toolkit.yaml

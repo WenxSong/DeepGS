@@ -1,0 +1,16 @@
+schema_version: 1
+name: heat_demo
+kind: synthetic
+observations: observations.npz
+units:
+  time: day
+  depth: m
+  water_content: fraction
+depth_positive: down
+time_origin: start_of_simulation
+source: Generated independently by examples/make_demo.py
+license: MIT
+details:
+  generator: examples/make_demo.py
+  reference_equation: theta_t = 0.002 theta_zz
+  purpose: manufactured heat-equation execution demo; not a Richards recovery benchmark

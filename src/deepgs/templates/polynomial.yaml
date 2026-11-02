@@ -1,0 +1,6 @@
+polynomial:
+  degree: 3
+  signs:
+    theta_z: -1
+    theta_zz: 1
+    theta_z^2: 1

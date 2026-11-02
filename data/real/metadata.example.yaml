@@ -1,0 +1,18 @@
+# Template only: no real observations or redistribution permission are supplied.
+# Copy as <dataset>/metadata.yaml and replace every placeholder before validation.
+schema_version: 1
+name: REPLACE_WITH_DATASET_NAME
+kind: real
+observations: observations.npz
+units:
+  time: day
+  depth: m
+  water_content: fraction
+depth_positive: down
+time_origin: REPLACE_WITH_ACTUAL_ORIGIN_AND_TIMEZONE_OFFSET
+source: REPLACE_WITH_SOURCE_CITATION_OR_MEASUREMENT_RECORD
+license: REPLACE_WITH_CONFIRMED_LICENSE_OR_PERMISSION
+details:
+  timezone: REPLACE_WITH_ACTUAL_TIMEZONE
+  instrument: REPLACE_WITH_INSTRUMENT_AND_CALIBRATION_INFORMATION
+  preprocessing: REPLACE_WITH_RECORDED_CONVERSIONS_AND_MISSING_DATA_HANDLING

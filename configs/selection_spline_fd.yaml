@@ -1,0 +1,25 @@
+# Selection-only diagnostic; no PINN or B-spline inversion runs here.
+schema_version: 2
+problem:
+  soil: homogeneous
+data:
+  path: ../intermediate/data/th.txt
+  format: txt
+  depths: [0.10, 0.12, 0.14, 0.16, 0.18]
+preprocess:
+  differentiation: fd
+library:
+  max_order: 4
+structure:
+  selector: spline
+  grouping:
+    normalization: global
+    min_group_size: 100
+  spline:
+    degree: 3
+    n_internal_knots: 6
+    lam: 0.01
+inversion:
+  enabled: false
+runtime:
+  device: cpu

@@ -1,0 +1,10 @@
+# Spline-SR: structure selection and coefficient inversion on the loam benchmark.
+pipeline: spline_sr
+data:
+  path: intermediate/data/th.txt
+  depths: [0.05, 0.10, 0.15, 0.20, 0.25]
+# This record spans 100 days, so the time input must be scaled for the field to fit well.
+field:
+  normalize_inputs: true
+  iterations: 50000
+  lbfgs_iterations: 10000

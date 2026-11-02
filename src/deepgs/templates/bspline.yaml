@@ -1,0 +1,3 @@
+bspline:
+  degree: 3
+  n_internal_knots: 6

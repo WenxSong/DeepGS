@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# Experiment outputs
+runs/
+
+# Local only: reference material, journal PDFs and test files
+intermediate/
+
+# Research input files stay local until their redistribution is confirmed.
+data/*.txt
+data/**/*.txt
+data/**/*.npy
+
+# Real observations remain local until their source and redistribution are set.
+data/real/*
+!data/real/README.md
+!data/real/metadata.example.yaml

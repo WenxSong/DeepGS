@@ -1,0 +1,12 @@
+# Song et al. (2022): DNN derivatives on noisy data, averaged over five seeds.
+pipeline: gsr
+data:
+  path: intermediate/data/th.txt
+  depths: [0.05, 0.10, 0.15, 0.20, 0.25]
+  noise: 0.01
+differentiation: dnn
+field:
+  iterations: 50000
+  lbfgs_iterations: 10000
+library:
+  depth_count: 20

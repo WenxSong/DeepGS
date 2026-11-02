@@ -1,0 +1,77 @@
+schema_version: 2
+problem:
+  soil: homogeneous
+data:
+  path: YOUR_DATA.npz
+  format: npz
+  units:
+    time: day
+    depth: m
+    water_content: fraction
+  depth_positive: down
+  noise: 0.0
+  noise_seed: 0
+preprocess:
+  differentiation: dnn
+  seeds: [0]
+  field:
+    hidden_layers: 5
+    width: 50
+    activation: silu
+    normalize_inputs: true
+    xavier: true
+    iterations: 20000
+    learning_rate: 0.001
+    lbfgs_iterations: 0
+    dtype: float64
+library:
+  max_order: 3
+  depth_count: 20
+  time_count: 5000
+structure:
+  selector: group
+  grouping:
+    win_size: 0.001
+    min_group_size: 100
+    normalization: global
+    merge_tail: 0.0
+  sgtr:
+    num_tols: 200
+    lam: 0.0001
+    maxit: 1
+    epsilon: 0.01
+    corrected: true
+  spline:
+    degree: 3
+    n_internal_knots: 6
+    lam: 0.01
+inversion:
+  enabled: true
+  coefficient_form: network
+  seed: 0
+  field:
+    hidden_layers: 5
+    width: 50
+    activation: silu
+    normalize_inputs: true
+    xavier: true
+    iterations: 0
+    learning_rate: 0.001
+    lbfgs_iterations: 0
+    dtype: float64
+  domain:
+    theta_bounds: auto
+    margin: 0.01
+  training:
+    epochs: 20000
+    learning_rate: 0.001
+    data_weight: 100.0
+    pde_weight: 1.0
+    log_every: 1000
+  collocation:
+    sampler: dynamic_lhs
+    points: 2000
+    dynamic_fraction: 0.9
+runtime:
+  device: auto
+  save_library: false

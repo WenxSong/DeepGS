@@ -1,0 +1,13 @@
+# Song et al. (2025): coarse-grained regression, then coefficients that depend on theta and depth.
+# Ks, alpha and n arrays are available. The author confirmed theta_s=0.43 and
+# theta_r=0.078 are constant at every depth for this dataset (2026-10-31).
+pipeline: deepgs
+soil: heterogeneous
+data:
+  path: intermediate/data/loam_all_0.2/th.txt
+  depths: [0.05, 0.15, 0.25]
+  noise: 0.1
+reference:
+  path: intermediate/data/loam_all_0.2
+  theta_s: 0.43
+  theta_r: 0.078

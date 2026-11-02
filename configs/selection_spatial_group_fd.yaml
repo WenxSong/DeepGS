@@ -1,0 +1,24 @@
+# Nonuniform coefficient diagnostic on a regular, clean simulator grid.
+schema_version: 2
+problem:
+  soil: heterogeneous
+data:
+  path: ../intermediate/data/loam_all_0.2/th.txt
+  format: txt
+  depths: [0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11]
+preprocess:
+  differentiation: fd
+structure:
+  selector: spatial_group
+  grouping:
+    normalization: group
+    min_group_size: 100
+  sgtr:
+    num_tols: 500
+    lam: 0.01
+    epsilon: 15.848931924611133
+    corrected: false
+inversion:
+  enabled: false
+runtime:
+  device: cpu

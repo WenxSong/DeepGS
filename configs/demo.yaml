@@ -1,0 +1,32 @@
+# Independent manufactured-profile example; checks execution, not soil accuracy.
+# Bundled input: data/synthetic/heat_demo/observations.npz
+schema_version: 2
+problem:
+  soil: homogeneous
+data:
+  path: ../data/synthetic/heat_demo/observations.npz
+  format: npz
+preprocess:
+  differentiation: fd
+structure:
+  selector: group
+  grouping:
+    min_group_size: 20
+  sgtr:
+    num_tols: 20
+inversion:
+  enabled: true
+  coefficient_form: network
+  field:
+    hidden_layers: 2
+    width: 10
+    dtype: float64
+  network:
+    hidden_sizes: [10]
+  training:
+    epochs: 20
+    log_every: 10
+  collocation:
+    points: 50
+runtime:
+  device: cpu

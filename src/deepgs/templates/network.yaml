@@ -1,0 +1,6 @@
+network:
+  hidden_sizes: [20, 20]
+  architecture: additive
+  theta_hidden: [40, 40, 40, 40]
+  depth_hidden: [10]
+  fusion_hidden: [40, 40]

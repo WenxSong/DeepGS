@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite the relevant method publications listed in README.md as well as this software."
+title: "DeepGS Toolkit"
+type: software
+authors:
+  - family-names: Song
+    given-names: Wenxiang
+version: 0.1.0
+license: MIT
+abstract: "Unified sparse structure selection and fixed-structure physics-informed coefficient inversion for soil water flow equations."
+repository-code: "https://github.com/WenxSong/DeepGS"

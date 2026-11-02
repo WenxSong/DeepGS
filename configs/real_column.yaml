@@ -1,0 +1,40 @@
+# Local soil-column example. Short budgets check execution, not recovery accuracy.
+# Original five sensor columns remain in the dataset; no truth/prior is injected.
+schema_version: 2
+problem:
+  soil: homogeneous
+data:
+  path: ../data/real/loamy_sand_wetting_and_drying/observations.npz
+  format: npz
+preprocess:
+  differentiation: dnn
+  seeds: [0]
+  field:
+    hidden_layers: 2
+    width: 10
+    activation: silu
+    iterations: 20
+    dtype: float64
+library:
+  max_order: 4
+  depth_count: 6
+  time_count: 250
+structure:
+  selector: spline
+  grouping:
+    min_group_size: 20
+    normalization: global
+inversion:
+  enabled: true
+  coefficient_form: network
+  field:
+    hidden_layers: 2
+    width: 10
+    dtype: float64
+  training:
+    epochs: 20
+    log_every: 10
+  collocation:
+    points: 50
+runtime:
+  device: cpu

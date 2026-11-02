@@ -1,0 +1,6 @@
+# Song et al. (2022): finite differences on clean data from five nodes.
+pipeline: gsr
+data:
+  path: intermediate/data/th.txt
+  depths: [0.10, 0.12, 0.14, 0.16, 0.18]
+differentiation: fd

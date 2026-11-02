@@ -1,0 +1,8 @@
+preprocess:
+  field:
+    iterations: 20000
+inversion:
+  training:
+    epochs: 20000
+runtime:
+  device: auto
