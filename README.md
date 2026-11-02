@@ -90,4 +90,4 @@ Please cite the publications corresponding to the components you use; see the [a
 
 3. Song, W., Shi, L., He, L., Zha, Y., Hu, X., Rahmati, M., & Vereecken, H. (2025). Deep learning identification of the governing equation for water flow in heterogeneous soils from data. *Water Resources Research, 61*(3), e2024WR037786. [https://doi.org/10.1029/2024WR037786](https://doi.org/10.1029/2024WR037786)
 
-4. Song, W., Shi, L., Wang, Y., He, L., Rahmati, M., & Vereecken, H. (2026). From soil moisture observations to governing flow equations: What data-driven equation discovery reveals. *Water Resources Research*, e2026WR045026.
+4. Song, W., Shi, L., Wang, Y., He, L., Rahmati, M., & Vereecken, H. (2026). From soil moisture observations to governing flow equations: What data-driven equation discovery reveals. *Water Resources Research*, e2026WR045026. [https://doi.org/10.1029/2026WR045026](https://doi.org/10.1029/2026WR045026)
